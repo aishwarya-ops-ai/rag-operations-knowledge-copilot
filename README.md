@@ -1,5 +1,10 @@
 # Operations Knowledge Copilot
 
+**Project page:** [aishwarya-ops-ai.github.io/rag-operations-knowledge-copilot](https://aishwarya-ops-ai.github.io/rag-operations-knowledge-copilot/)
+
+> GitHub Pages hosts the static portfolio page only. The Python, Chroma, and
+> Ollama application runs locally and is not hosted on GitHub Pages.
+
 Operations Knowledge Copilot is a small, local Retrieval-Augmented Generation
 (RAG) portfolio project for operational SOPs, policies, and training material.
 It demonstrates the practical RAG lifecycle: ingest documents, retrieve relevant
