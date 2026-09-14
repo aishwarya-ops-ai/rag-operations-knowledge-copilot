@@ -1,0 +1,131 @@
+Northstar Services
+Refund & Exception Policy
+
+Document Owner: Financial Operations & Customer Experience
+Applies To: Customer Support, Billing Specialists, Team Leads, Operations Managers
+Primary Systems: Northstar Support Desk, PayFlow, Customer Ledger
+
+1. Purpose
+
+The Refund & Exception Policy defines when Northstar Services may return customer payments, issue partial refunds, provide service credits, or make exceptions to normal commercial terms.
+
+Employees should distinguish between a refund, which returns money already charged, and a service credit, which applies value toward future Northstar services.
+
+2. Standard Refund Eligibility
+
+Customers are normally eligible for a full refund when:
+
+- Northstar charged the customer twice for the same service;
+- the paid service was never delivered because of a confirmed Northstar failure;
+- the customer cancelled within an applicable cooling-off period;
+- a billing error caused an amount to be charged incorrectly; or
+- the service was cancelled by Northstar before meaningful delivery began.
+
+Refund requests should normally be submitted within 30 calendar days of the original charge.
+
+Requests submitted between 31 and 60 days may still be considered but require Team Lead approval.
+
+Requests more than 60 days after the charge normally require Operations Manager approval.
+
+Requests older than 180 days should generally be denied unless there is evidence of fraud, legal obligation, systemic billing error, or another extraordinary circumstance.
+
+3. Partial Refunds
+
+A partial refund may be appropriate when the customer received part of the purchased service.
+
+Agents should calculate refunds based on undelivered value where reasonably measurable.
+
+For subscriptions, Northstar normally does not provide prorated refunds for partially used billing periods unless:
+
+- a Northstar outage prevented meaningful use for more than 48 consecutive hours;
+- the customer was incorrectly billed after confirmed cancellation;
+- a contractual agreement requires proration; or
+- a Team Lead approves an exception.
+
+A customer who simply stopped using the service is not automatically entitled to a partial refund.
+
+4. Refund Approval Limits
+
+Support Specialists may approve refunds up to $75 per customer case.
+
+Senior Specialists may approve up to $200.
+
+Team Leads may approve up to $750.
+
+Operations Managers may approve refunds up to $5,000.
+
+Amounts above $5,000 require approval from the Director of Operations or Finance.
+
+Approval limits apply to the total financial adjustment associated with the underlying issue, not each individual transaction.
+
+For example, three $70 refunds related to the same billing error equal a $210 adjustment and cannot be individually approved by an employee whose limit is $75.
+
+5. Service Credits
+
+Service credits may be used when a customer experienced inconvenience but a cash refund is not clearly justified.
+
+Standard agents may issue credits up to $50.
+
+Credits should not normally exceed 25% of the affected service value unless approved by a Team Lead.
+
+A service credit should not be offered as a substitute when the customer is legally or contractually entitled to a refund.
+
+Customers may decline a credit and continue requesting a refund.
+
+6. Refund Timing
+
+Approved card refunds are normally submitted to the payment processor within two business days.
+
+The customer may require an additional 3–10 business days to see the refund depending on their financial institution.
+
+Employees must not promise that the refund will appear on a specific date unless the payment processor provides confirmed timing.
+
+Bank transfer refunds may take longer and should generally be completed within 10 business days after approval.
+
+7. Exceptions and Special Circumstances
+
+Northstar may approve refunds outside standard policy when there is a clear service recovery benefit.
+
+Factors that may support an exception include:
+
+- substantial repeat service failures;
+- incorrect guidance previously provided by Northstar;
+- vulnerability or hardship circumstances;
+- a strategic account relationship;
+- significant documented operational failure.
+
+Customer dissatisfaction by itself is not sufficient reason to bypass policy.
+
+Team Leads may approve one discretionary exception per customer of up to $250 in a rolling 12-month period.
+
+Additional discretionary exceptions require Operations Manager approval.
+
+8. Suspected Abuse
+
+Employees should not accuse customers of refund abuse.
+
+Cases should be flagged for review when there are:
+
+- three or more refund requests within 90 days;
+- inconsistent explanations;
+- multiple accounts using the same payment method;
+- repeated claims involving services records show were delivered; or
+- unusually large refund requests inconsistent with account history.
+
+A fraud flag does not automatically mean a refund must be denied.
+
+Legitimate duplicate charges and confirmed billing errors should still be corrected even when the customer is under review.
+
+9. Ambiguous Scenarios
+
+When both the customer and Northstar contributed to a problem, employees may consider a partial refund or service credit.
+
+Example: A customer missed an appointment because Northstar sent the reminder late, but the customer had separately received the correct appointment time earlier.
+
+There is no mandatory percentage for shared-responsibility cases.
+
+The employee should document reasoning and seek Team Lead approval when the proposed adjustment exceeds their authority.
+
+If a refund policy conflicts with a signed customer contract, the contract normally takes precedence unless the contract provision appears unlawful or the employee has been instructed otherwise by Legal or Finance.
+
+Employees should not interpret uncertain legal obligations themselves. Such cases should be escalated.

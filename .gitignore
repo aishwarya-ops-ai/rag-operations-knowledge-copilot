@@ -1,0 +1,43 @@
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.coverage
+htmlcov/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+
+# Local configuration and common secret files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Editor and operating-system files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Logs and temporary files
+*.log
+*.tmp
+*.pid
+*.sqlite
+*.sqlite3
+
+# Generated local RAG artifacts
+data/chroma/
+data/models/
+data/evaluation/*.jsonl
+data/feedback/

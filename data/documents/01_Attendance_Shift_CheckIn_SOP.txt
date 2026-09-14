@@ -1,0 +1,115 @@
+Northstar Services
+Attendance & Shift Check-In SOP
+
+Document Owner: Workforce Operations
+Applies To: Front-line associates, reviewers, support specialists, team leads, and contractors working scheduled production shifts
+Primary Systems: Northstar Workforce Portal (NWP), TimeTrack, Slack Operations Channels
+
+1. Purpose
+
+The Attendance & Shift Check-In SOP defines how employees are expected to confirm attendance, begin scheduled work, report delays, and handle attendance-related exceptions.
+
+Employees are responsible for reviewing their schedules before each workday. Not receiving a reminder from TimeTrack does not excuse a missed shift.
+
+A scheduled shift is considered successfully started only when the employee completes the required check-in procedure. Logging into Slack, opening company email, or turning on a company-issued computer does not independently count as attendance.
+
+2. Standard Check-In Procedure
+
+Employees may check in through TimeTrack beginning 10 minutes before their scheduled shift start time.
+
+A check-in recorded between 10 minutes before the shift and 5 minutes after the scheduled start time is considered On Time.
+
+Example:
+
+A shift scheduled for 9:00 AM may be checked in between 8:50 AM and 9:05 AM without being classified as late.
+
+Employees checking in 6–15 minutes after the scheduled start time are classified as Late – Level 1.
+
+Employees checking in 16–30 minutes late are classified as Late – Level 2 and must provide a reason in the attendance portal before the end of the shift.
+
+An employee who has not checked in within 30 minutes of the scheduled start is automatically marked Absent – Pending Review, unless the employee or another authorized person has already contacted the Team Lead.
+
+Employees may not check in on behalf of another employee.
+
+3. Technical Check-In Failures
+
+If TimeTrack is unavailable, the employee must post the following in the designated attendance Slack channel:
+
+- employee ID;
+- scheduled shift;
+- attempted check-in time; and
+- screenshot or description of the error.
+
+The Slack message must be submitted within 10 minutes of the scheduled shift start.
+
+The Team Lead may later request Workforce Operations to manually correct the attendance record.
+
+If the employee claims a technical failure but provides no evidence, the Team Lead may still approve a manual correction when system logs independently show an outage.
+
+A personal internet outage is not automatically considered a system outage.
+
+Employees working remotely are expected to maintain a reasonable backup connection where practical. However, outages affecting an entire neighborhood, confirmed ISP disruptions, or electricity failures lasting more than 15 minutes may qualify as an excused technical absence.
+
+4. Late Notification Rules
+
+Employees who know in advance that they will be late should notify their Team Lead as soon as reasonably possible.
+
+When the expected delay exceeds 15 minutes, notification should normally occur before the shift begins.
+
+Notification does not automatically excuse lateness.
+
+A Team Lead may excuse up to two late arrivals of 15 minutes or less within a rolling 30-day period when caused by exceptional circumstances.
+
+A third incident within the same rolling period requires Operations Manager approval to be treated as excused.
+
+Repeated lateness may trigger attendance coaching even when individual incidents were approved.
+
+5. No-Show and Emergency Exceptions
+
+An employee is considered a No-Call No-Show when all of the following apply:
+
+1. no check-in is recorded within 60 minutes of the shift start;
+2. the employee has not contacted the Team Lead or Workforce Operations; and
+3. no emergency information has been received from another credible source.
+
+One No-Call No-Show requires documented coaching.
+
+Two incidents within 90 days must be escalated to the Operations Manager.
+
+Three incidents within 180 days may be referred to HR for formal disciplinary review.
+
+Emergency circumstances may override this process.
+
+Examples include hospitalization, accidents, immediate family emergencies, or situations where the employee could not reasonably access a phone.
+
+Supporting documentation may be requested but is not mandatory in every emergency.
+
+6. Early Departure
+
+Employees must receive approval before leaving a shift more than 15 minutes early.
+
+Team Leads may approve early departures of up to 60 minutes if operational coverage remains above minimum staffing requirements.
+
+Departures exceeding 60 minutes require Operations Manager approval unless there is an immediate health or safety emergency.
+
+Employees who become sick during a shift should inform their Team Lead before signing out where reasonably possible.
+
+If someone disconnects suddenly and cannot be reached for 30 minutes, the Team Lead should classify the event as Unplanned Disconnect – Review Required, rather than immediately recording an attendance violation.
+
+7. Schedule Disputes and Ambiguous Cases
+
+Employees are expected to follow the schedule displayed in NWP.
+
+However, if a Team Lead communicated a different schedule in writing, such as through email or Slack, the written instruction may override NWP.
+
+Verbal schedule changes are more difficult to verify. In disputes involving verbal instructions, the Operations Manager should review available evidence, including staffing records and statements from both parties.
+
+If NWP displays two overlapping shifts due to a scheduling error, the employee should not be penalized for failing to work both.
+
+Employees working voluntary overtime must still check in through TimeTrack unless the overtime was requested after the shift had already begun.
+
+When the employee is actively working but forgot to check in, Team Leads may approve a retroactive check-in if there is reasonable evidence of work activity. Retroactive corrections submitted more than 72 hours after the shift require Operations Manager approval.
+
+Attendance records are finalized every Monday at 12:00 PM local operations time for the previous week.
+
+Corrections submitted after finalization may still be approved but may not appear until the next payroll cycle.

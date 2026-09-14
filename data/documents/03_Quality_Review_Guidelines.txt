@@ -1,0 +1,118 @@
+Northstar Services
+Quality Review Guidelines
+
+Document Owner: Quality Operations
+Applies To: Quality Analysts, Reviewers, Team Leads, Operations Managers
+Primary Systems: Northstar Quality Hub (NQH)
+
+1. Purpose
+
+The Quality Review Guidelines establish how completed customer interactions and operational cases are evaluated for accuracy, compliance, process adherence, communication quality, and customer impact.
+
+Quality scores are intended to identify performance patterns. They should not be used as the sole basis for disciplinary decisions without contextual review.
+
+2. Standard Review Volume
+
+Each active front-line employee should normally receive five quality reviews per calendar month.
+
+At least:
+
+- two should be randomly selected;
+- one should involve a complex or higher-risk case where available; and
+- one should come from the employee's most recent 10 working days.
+
+Employees who handled fewer than 20 eligible cases during the month may receive fewer than five reviews.
+
+Employees in formal quality coaching may receive up to 10 reviews per month.
+
+Quality Analysts should not intentionally select only poor-performing cases unless conducting a targeted investigation.
+
+3. Scoring Framework
+
+Cases are scored across five categories:
+
+- Process Accuracy – 30%
+- Resolution Accuracy – 30%
+- Communication – 15%
+- Documentation – 15%
+- Efficiency – 10%
+
+The standard passing score is 85%.
+
+Scores of 80–84.99% are classified as Needs Improvement.
+
+Scores below 80% are classified as Fail.
+
+However, certain errors are defined as Critical Errors and cause the entire review to fail regardless of the numerical score.
+
+Critical Errors include:
+
+- unauthorized disclosure of protected customer information;
+- processing a financial adjustment above the employee's authority;
+- deliberately falsifying case documentation;
+- closing a case without required action where the omission creates material customer or compliance risk; or
+- failing to escalate a credible immediate safety threat.
+
+4. Major and Minor Errors
+
+Not every incorrect action is critical.
+
+A Major Error materially affects resolution but does not independently create severe compliance or safety exposure.
+
+Examples include giving a customer the wrong eligibility decision, failing to complete a required refund, or providing incorrect instructions that require another contact.
+
+A Minor Error has limited impact.
+
+Examples include small formatting mistakes, non-material documentation omissions, or failing to use the preferred greeting when the interaction remains otherwise professional.
+
+Three repeated minor errors of the same type within one reviewed case may be treated as one major error if together they materially reduce the quality of the interaction.
+
+5. Reviewer Disagreement
+
+When an employee disputes a review, they may submit a quality appeal within five calendar days of receiving the result.
+
+The original reviewer should first confirm that no obvious scoring error occurred.
+
+If disagreement remains, the case should be assigned to a second Quality Analyst who did not participate in the original review.
+
+If the second reviewer changes the score by less than five percentage points, the second score becomes final unless a critical-error classification is disputed.
+
+If scores differ by five or more percentage points, the case must be sent to a Team Lead or Senior Quality Analyst for adjudication.
+
+All disputed Critical Errors require adjudication regardless of score difference.
+
+6. Gold-Standard and Calibration Reviews
+
+Northstar periodically uses pre-scored gold-standard cases to test reviewer accuracy.
+
+Quality Analysts are expected to maintain at least 90% agreement with approved gold labels across a rolling sample of 20 calibration decisions.
+
+Analysts falling between 80% and 89.99% should receive calibration coaching.
+
+Agreement below 80% should result in temporary removal from independent production reviews until recalibration is completed.
+
+A disagreement with a gold label is not automatically considered reviewer failure. If multiple experienced reviewers independently challenge the gold label, the Quality Manager may reopen the gold-standard decision.
+
+7. Handling Ambiguous Cases
+
+Reviewers must score based on the information reasonably available to the employee at the time the work was completed.
+
+Information added to an account afterward should not normally be used to penalize the employee.
+
+For example, if a customer later provides documentation showing that a refund was invalid, an employee who approved the refund based on valid information available earlier should not automatically fail the review.
+
+Policy language that allows judgment should not be scored as though only one acceptable decision existed.
+
+When two actions are both reasonably defensible under policy, reviewers should generally avoid assigning a major error solely because they personally prefer one approach.
+
+8. Quality Performance Escalation
+
+An employee with an average monthly score below 85% should receive documented coaching.
+
+Two consecutive months below 85% require a formal improvement plan unless insufficient review volume makes the score unreliable.
+
+Any employee receiving two Critical Errors within 30 days requires Operations Manager review.
+
+Three Critical Errors within a rolling 90-day period must be escalated to Senior Operations and HR, although escalation does not automatically mean termination.
+
+Quality metrics should be considered together with case complexity, workload, tenure, and reviewer consistency.

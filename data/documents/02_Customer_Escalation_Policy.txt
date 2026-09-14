@@ -1,0 +1,120 @@
+Northstar Services
+Customer Escalation Policy
+
+Document Owner: Customer Experience Operations
+Applies To: Customer Support Specialists, Escalation Specialists, Team Leads, Operations Managers
+Primary Systems: Northstar Support Desk (NSD), CRM, CallHub
+
+1. Purpose
+
+The Customer Escalation Policy defines when a customer issue should remain with the assigned support agent and when it must be transferred, escalated, or reported to higher levels of the organization.
+
+An escalation is based primarily on risk and authority required, not simply customer dissatisfaction.
+
+A customer asking for a supervisor does not automatically mean the issue qualifies as a Level 3 escalation.
+
+2. Escalation Levels
+
+Northstar uses four operational escalation levels.
+
+Level 1 – Standard Resolution
+
+Routine questions, minor complaints, basic account issues, and requests that fall within the agent's approved authority.
+
+Agents should attempt reasonable resolution before escalating.
+
+Level 2 – Team Lead Review
+
+Level 2 applies when:
+
+- the customer requests an exception outside standard policy;
+- an agent requires approval above their financial authority;
+- the same customer has contacted Northstar three or more times regarding the same unresolved issue within seven days;
+- the customer explicitly asks for a supervisor after the agent has attempted resolution; or
+- the potential customer impact is estimated between $250 and $1,000.
+
+Level 2 escalations should normally be reviewed within 60 minutes during staffed operating hours.
+
+Level 3 – Operations Manager Escalation
+
+Level 3 applies when:
+
+- potential financial exposure exceeds $1,000;
+- more than 10 customers appear to be affected by the same operational failure;
+- a corporate client threatens contract cancellation;
+- an issue has remained unresolved for more than 48 hours despite Level 2 involvement;
+- a customer alleges discriminatory treatment by a Northstar employee; or
+- a serious service failure has generated public social-media attention.
+
+Level 3 cases should be acknowledged within 30 minutes when identified during operating hours.
+
+Level 4 – Critical Incident
+
+Level 4 cases include credible threats involving:
+
+- immediate physical safety;
+- substantial data exposure;
+- law-enforcement involvement;
+- major media inquiries;
+- regulatory agencies;
+- widespread system failure affecting more than approximately 100 active customers.
+
+Employees should immediately notify the Operations Manager and the designated Incident Response contact.
+
+Agents should not investigate Level 4 incidents independently beyond collecting necessary initial information.
+
+3. Customer Threats and Aggressive Language
+
+A customer saying, "I'm going to sue you," does not automatically constitute Level 4.
+
+General legal threats should normally be treated as Level 2 unless the customer identifies an active lawsuit, attorney communication, regulatory filing, or formal legal notice.
+
+Similarly, statements such as "I'll post this everywhere" normally remain Level 2.
+
+However, if a post has already received significant public attention, media engagement, or identifiable reputational impact, the matter may qualify for Level 3.
+
+Threats of violence must be treated differently.
+
+A vague statement made in frustration should be documented and reviewed by a Team Lead.
+
+A specific threat identifying a person, location, method, or timeframe should be escalated immediately as Level 4.
+
+4. Escalation Ownership
+
+The employee who creates an escalation remains responsible for documenting the issue until ownership has been formally accepted by the next escalation level.
+
+Sending a Slack message does not automatically transfer ownership.
+
+The receiving Lead or Manager must acknowledge the case in NSD or explicitly confirm ownership.
+
+If no acknowledgment is received within the required response time, the employee should follow up once.
+
+For Level 3 or Level 4 issues, failure to receive a response within 15 minutes should trigger escalation to the next available manager.
+
+5. Financial Authority
+
+Standard agents may issue service credits up to $50 when supported by policy.
+
+Senior agents may approve up to $150.
+
+Team Leads may approve up to $500.
+
+Amounts between $500 and $2,000 require Operations Manager approval.
+
+Amounts above $2,000 generally require Director approval unless an emergency incident procedure grants temporary authority.
+
+Splitting a refund or credit into multiple transactions to avoid an approval threshold is prohibited.
+
+6. Difficult or Ambiguous Cases
+
+Customer emotion alone does not determine escalation level.
+
+A customer may be extremely angry about a $10 issue that remains Level 1, while a calm customer reporting possible data exposure may require Level 4 escalation.
+
+VIP customers do not automatically receive Level 3 classification. However, enterprise accounts identified as Strategic Accounts should have their Account Manager notified of Level 2 or higher issues.
+
+If multiple escalation rules apply, employees should use the highest applicable level.
+
+If the employee is genuinely uncertain whether a matter qualifies as Level 3 or Level 4, the employee should escalate to Level 3 and notify the Operations Manager immediately rather than delaying the case while attempting to classify it perfectly.
+
+All Level 3 and Level 4 escalations require a written incident summary before case closure.

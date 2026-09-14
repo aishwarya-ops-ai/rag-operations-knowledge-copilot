@@ -1,0 +1,146 @@
+Northstar Services
+New Employee Training SOP
+
+Document Owner: Learning & Development
+Applies To: New Operations Employees, Trainers, Team Leads, Quality Analysts
+Primary Systems: Northstar Learning Center (NLC), Training Sandbox, Northstar Quality Hub
+
+1. Purpose
+
+The New Employee Training SOP describes the standard process used to prepare new Northstar Services employees for independent production work.
+
+Training completion does not automatically authorize an employee to perform all production activities. Certain high-risk tasks require separate certification.
+
+2. Standard Training Program
+
+The standard Operations onboarding program lasts 10 business days.
+
+The expected structure is:
+
+Days 1–2: Company orientation, security, systems access, attendance expectations, and basic product knowledge.
+
+Days 3–5: Process instruction, policy walkthroughs, trainer demonstrations, and guided exercises.
+
+Days 6–7: Sandbox case simulations.
+
+Days 8–9: Supervised production or controlled live-case handling.
+
+Day 10: Final assessment and readiness review.
+
+The schedule may be adjusted for holidays, system outages, role complexity, or trainee performance.
+
+A shortened training schedule should not be used solely because production staffing is low.
+
+3. Attendance Requirements
+
+Trainees are expected to attend at least 90% of scheduled training hours.
+
+Missing more than 10% does not automatically mean training failure, but the Trainer and Team Lead must determine whether missed material can reasonably be recovered.
+
+Any employee missing a full day during Days 3–7 should normally complete a makeup session before advancing to supervised production.
+
+Employees missing Day 1 may join the cohort on Day 2 only if required security, HR, and access modules are completed separately.
+
+Employees absent for more than three training days should normally be moved to a later cohort unless an Operations Manager approves continuation.
+
+4. Knowledge Checks
+
+Trainees complete short knowledge checks during the program.
+
+Knowledge checks on Days 3–7 require a recommended score of 80% but may be retaken without formal penalty.
+
+The final assessment requires at least 85%.
+
+Employees scoring 80–84% on the final assessment may receive one remediation session and one reassessment.
+
+Employees scoring below 80% should not proceed directly to production.
+
+A second failed final assessment requires a readiness review involving the Trainer and Team Lead.
+
+A third attempt requires Operations Manager approval.
+
+5. Supervised Production
+
+During supervised production, trainees may handle live cases only under an approved nesting environment.
+
+At least the first five live cases should be reviewed by a Trainer, Team Lead, or certified mentor before final closure where operationally practical.
+
+This requirement may be modified during high-volume periods, but at least five cases must still receive retrospective review within 24 hours.
+
+Trainees must not independently process:
+
+- refunds above $75;
+- formal legal complaints;
+- Level 3 or Level 4 escalations;
+- suspected data-security incidents;
+- permanent account closures involving outstanding balances.
+
+These tasks require assistance even if the trainee has technically completed the relevant training module.
+
+6. Nesting Period
+
+After passing formal training, employees enter a five-working-day nesting period.
+
+During nesting, employees normally work at approximately 60–80% of the standard productivity expectation.
+
+Quality expectations are not reduced to the same degree.
+
+Employees are expected to maintain at least an 80% quality score during nesting, increasing to the standard 85% expectation after nesting.
+
+A single failed case does not automatically extend nesting.
+
+Nesting should normally be extended by three to five working days when:
+
+- average quality is below 80%;
+- the employee demonstrates repeated policy misunderstanding;
+- significant system-navigation problems remain; or
+- the employee requires assistance on more than approximately 30% of routine cases by the end of Day 5.
+
+7. Certification and High-Risk Work
+
+Some activities require separate certification.
+
+For example, employees may need individual certification for:
+
+- high-value refunds;
+- enterprise accounts;
+- financial disputes;
+- safety-related escalations;
+- quality auditing;
+- customer-data export requests.
+
+Completing general onboarding does not grant these permissions.
+
+Managers should not instruct uncertified employees to perform restricted work merely because queues are understaffed.
+
+Emergency temporary authorization may be granted by an Operations Manager for specific low-to-moderate-risk tasks, but the authorization must be documented and should normally last no more than one shift.
+
+8. Trainer and Trainee Disagreement
+
+A Trainer may recommend that an employee is not ready for production even if the employee passes the final assessment.
+
+Examples include serious communication issues, repeated unsafe decision-making, inability to navigate required systems, or consistent dependence on trainer assistance.
+
+However, subjective concerns must be documented with examples.
+
+A trainee should not fail solely because their working style differs from the Trainer's preferences.
+
+When the Trainer and Team Lead disagree on readiness, the Operations Manager makes the final decision.
+
+Quality data, simulation results, attendance, trainer observations, and the complexity of errors should all be considered.
+
+9. Ambiguous and Exceptional Cases
+
+A trainee who makes one Critical Error during training is not automatically disqualified.
+
+The Trainer should evaluate whether the error resulted from misunderstanding, unclear training material, system design, or reckless disregard of policy.
+
+Repeated Critical Errors after coaching require escalation to the Operations Manager.
+
+Strong trainees may complete some modules ahead of schedule but should not normally graduate before Day 8 unless they have substantial prior Northstar experience and receive Operations Manager approval.
+
+Former Northstar employees rehired within six months may receive abbreviated training if they return to substantially the same role. Rehires returning after more than six months normally complete at least a skills assessment and policy refresher.
+
+Policies may change between training and production. Employees are responsible for following the current approved policy, even when older training material says something different.
+
+When a trainee identifies a genuine conflict between training material and a live policy document, the Trainer should pause scoring on the disputed issue until the correct guidance is confirmed.
