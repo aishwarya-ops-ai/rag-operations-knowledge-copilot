@@ -1,0 +1,88 @@
+HOW TO RUN OPERATIONS KNOWLEDGE COPILOT
+========================================
+
+You will use two Terminal windows: one for Ollama and one for Streamlit.
+
+
+1. OPEN TERMINAL
+----------------
+
+Press Command + Space, type Terminal, and press Return.
+
+This opens the Terminal application on your Mac.
+
+
+2. GO TO THE PROJECT FOLDER
+---------------------------
+
+Copy the command below, paste it into Terminal, and press Return:
+
+cd "$HOME/Documents/ChatGPT/₹1L Income Sprint — Dec 2026/11_AI_Projects/RAG-Operations-Knowledge-Copilot"
+
+This command moves Terminal into the exact folder containing this project.
+
+
+3. ACTIVATE THE VIRTUAL ENVIRONMENT
+-----------------------------------
+
+Copy the command below, paste it into Terminal, and press Return:
+
+source .venv/bin/activate
+
+This command activates the project's existing virtual environment named .venv.
+
+You should now see (.venv) near the beginning of the Terminal prompt.
+
+
+4. START OLLAMA IF IT IS NOT ALREADY RUNNING
+---------------------------------------------
+
+Press Command + N to open a second Terminal window.
+
+This keyboard shortcut opens another Terminal window while keeping the first one open.
+
+Copy the command below into the second Terminal window and press Return:
+
+ollama serve
+
+This command starts the local Ollama service used for answer generation.
+
+Leave this second Terminal window open while using the application.
+
+If you see a message saying port 11434 is already in use, Ollama is already
+running and you can continue to Step 5.
+
+
+5. LAUNCH STREAMLIT
+-------------------
+
+Return to the first Terminal window, where you can see (.venv), and run:
+
+streamlit run streamlit_app.py
+
+This command launches the project's Streamlit browser interface.
+
+Leave this Terminal window open while using the application.
+
+
+6. OPEN THE BROWSER URL
+-----------------------
+
+Open Safari, Chrome, or another browser and enter:
+
+http://localhost:8501
+
+This address opens the application running locally on your Mac.
+
+
+7. STOP THE APPLICATION
+-----------------------
+
+Return to the first Terminal window and press Control + C.
+
+This keyboard shortcut stops the Streamlit application.
+
+Return to the second Terminal window and press Control + C if you started
+Ollama with the "ollama serve" command.
+
+This keyboard shortcut stops the local Ollama service.

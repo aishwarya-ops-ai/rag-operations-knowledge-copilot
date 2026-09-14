@@ -63,6 +63,18 @@ class ChromaVectorStore:
     def count(self) -> int:
         return self._get_or_create_collection().count()
 
+    def source_count(self) -> int:
+        """Return the number of distinct source documents in the local index."""
+        stored = self._get_or_create_collection().get(include=["metadatas"])
+        metadatas = stored.get("metadatas") or []
+        return len(
+            {
+                str(metadata["source"])
+                for metadata in metadatas
+                if metadata and metadata.get("source")
+            }
+        )
+
     def query(self, query_embedding: Sequence[float], top_k: int) -> List[RetrievalResult]:
         if top_k <= 0:
             raise ValueError("top_k must be positive")

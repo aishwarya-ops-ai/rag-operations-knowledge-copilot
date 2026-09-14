@@ -54,12 +54,47 @@ CSV evaluation cases -> same retriever and confidence gate -> metrics + failure 
 
 Core technology choices:
 
-- Python CLI
+- Python CLI and local Streamlit browser interface
 - Sentence Transformers `all-MiniLM-L6-v2`
 - Chroma persistent local vector store
 - Optional local Ollama model, default `gemma3:4b`
 - Local TXT, CSV, and JSONL files
 - No paid API, hosted database, or hosted vector service
+
+## User Interface
+
+Users interact with the RAG system through a local browser interface built with
+Streamlit. Running `streamlit_app.py` starts the interface on the user's Mac at
+`http://localhost:8501`; it is not hosted on a public or production server.
+
+The interface provides:
+
+- a chat-style box for operations questions;
+- the grounded answer and its confidence status;
+- source filenames and zero-based chunk numbers;
+- visible supporting excerpts and an expandable view of all retrieved evidence;
+- Helpful and Not helpful feedback controls with an optional comment; and
+- an Evaluation tab for running the existing portfolio evaluation dataset.
+
+The Streamlit layer reuses the same ingestion, retrieval, answer-generation,
+citation-validation, insufficient-evidence, feedback, and evaluation logic as
+the CLI. The existing CLI remains available.
+
+## Demo Workflow
+
+```text
+Question → retrieval → grounded answer → citation → feedback
+```
+
+1. The user enters a question in the Streamlit chat box.
+2. The existing retriever embeds the question and finds the top matching Chroma
+   chunks.
+3. The local Ollama model produces an answer using only those retrieved chunks,
+   or the application returns the insufficient-evidence fallback.
+4. Validated evidence identifiers are mapped to the real source filenames and
+   chunk numbers, and the supporting excerpts remain visible.
+5. The user can submit a Helpful or Not helpful rating and an optional comment,
+   which are stored locally for later review.
 
 ## Document Ingestion
 
@@ -302,7 +337,7 @@ Git because they can contain user questions and generated text.
 - Portfolio demonstration using synthetic documents, not real company policies
 - Not deployed, secured, monitored, or tested as a production service
 - TXT-only ingestion; no PDF, DOCX, OCR, tables, or web content
-- CLI interface and local single-user storage only
+- Local-only Streamlit/CLI interfaces and single-user storage
 - No authentication, permissions, tenant isolation, or document-level access
   controls
 - No incremental document synchronization or automatic index versioning
@@ -325,13 +360,17 @@ once:
 5. Expand the evaluation set with independently reviewed paraphrases and more
    unanswerable questions.
 6. Add generated-answer correctness and citation-support evaluation.
-7. Add a small local web interface while keeping evidence visible.
+7. Improve the local browser UI with document-management controls only after
+   access and index-versioning behavior are defined.
 8. Introduce document versioning, access control, audit logging, and secure data
    handling before considering any real deployment.
 
-## Running Locally
+## How to Run
 
 Python 3.9+ is supported by the pinned dependencies.
+
+From the folder that contains this repository, prepare and index the project on
+the first run:
 
 ```bash
 cd 11_AI_Projects/RAG-Operations-Knowledge-Copilot
@@ -344,6 +383,30 @@ python app.py index
 
 The first index run downloads the free embedding model. Later indexing and
 retrieval load it from the project-local cache.
+
+If Ollama is not already running, open a separate Terminal window and start it:
+
+```bash
+ollama serve
+```
+
+The default local model is `gemma3:4b`. Download it once if it is not already
+installed:
+
+```bash
+ollama pull gemma3:4b
+```
+
+In the project Terminal window, activate the existing environment and launch
+Streamlit:
+
+```bash
+source .venv/bin/activate
+streamlit run streamlit_app.py
+```
+
+Open `http://localhost:8501` in a browser. Both Streamlit and Ollama run locally;
+no production hosting or paid service is involved.
 
 Common commands:
 
@@ -362,13 +425,6 @@ python app.py evaluate --top-k 4
 
 # Tests
 python -m pytest -q
-```
-
-For optional local generation, install Ollama separately and download the
-default model:
-
-```bash
-ollama pull gemma3:4b
 ```
 
 Optional overrides:
