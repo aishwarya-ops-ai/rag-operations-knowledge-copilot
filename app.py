@@ -10,6 +10,7 @@ from src.config import (
     EVALUATION_FILE,
     EVALUATION_RESULTS_FILE,
     MIN_GROUNDING_SIMILARITY,
+    PARAPHRASE_EVALUATION_FILE,
 )
 from src.evaluation.evaluator import append_result, evaluate_portfolio_rag
 from src.feedback.store import FeedbackStore
@@ -224,6 +225,7 @@ def evaluate_command(top_k: int) -> None:
         EVALUATION_FILE,
         top_k=top_k,
         minimum_similarity=MIN_GROUNDING_SIMILARITY,
+        paraphrases_path=PARAPHRASE_EVALUATION_FILE,
     )
     append_result(EVALUATION_RESULTS_FILE, result)
 
@@ -286,6 +288,40 @@ def evaluate_command(top_k: int) -> None:
         f"Source-match rate: {result['source_matches']}/"
         f"{result['answerable_count']} ({result['source_match_rate']:.1%})"
     )
+    print(
+        f"Canonical query accuracy: {result['canonical_query_successes']}/"
+        f"{result['canonical_query_count']} "
+        f"({result['canonical_query_accuracy']:.1%})"
+    )
+    print(
+        f"Paraphrase Retrieval Success Rate: "
+        f"{result['paraphrase_successes']}/{result['paraphrase_count']} "
+        f"({result['paraphrase_retrieval_success_rate']:.1%})"
+    )
+    print(
+        f"Unsupported-question refusal accuracy: "
+        f"{result['unsupported_refusals']}/{result['unanswerable_count']} "
+        f"({result['unsupported_question_refusal_accuracy']:.1%})"
+    )
+
+    failed_paraphrases = [
+        case for case in result["paraphrase_cases"] if not case["paraphrase_pass"]
+    ]
+    if failed_paraphrases:
+        print("\nPARAPHRASE FAILURES")
+        print("-" * 72)
+        for case in failed_paraphrases:
+            rank = case["expected_source_rank"] or "—"
+            similarity = (
+                f"{case['top_similarity']:.3f}"
+                if case["top_similarity"] is not None
+                else "—"
+            )
+            print(
+                f"{case['id']} | expected-source rank {rank}; "
+                f"top similarity {similarity}"
+            )
+            print(f"    {case['question']}")
     print("\nMetric definitions:")
     print(f"- Retrieval hit: expected source appears anywhere in the top {top_k}.")
     print("- Source match: expected source is the first-ranked result.")
@@ -297,6 +333,11 @@ def evaluate_command(top_k: int) -> None:
         "- Unsupported answer: an expected-unanswerable question crosses that "
         "retrieval gate. It measures risk, not verified model hallucination."
     )
+    print(
+        "- Paraphrase success: expected source appears in top-k and the best "
+        "similarity passes the pre-generation evidence threshold."
+    )
+    print("- This evaluation does not grade the generated answer prose.")
     print(f"Result appended to {EVALUATION_RESULTS_FILE}")
 
 

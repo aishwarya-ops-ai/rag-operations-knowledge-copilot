@@ -55,6 +55,7 @@ class ChromaVectorStore:
                     "source": chunk.source,
                     "chunk_index": chunk.chunk_index,
                     "character_count": chunk.character_count,
+                    "retrieval_aliases": " | ".join(chunk.retrieval_aliases),
                 }
                 for chunk in chunks
             ],

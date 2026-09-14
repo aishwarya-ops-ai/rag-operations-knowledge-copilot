@@ -168,6 +168,23 @@ expected source, while 3, 6, and 8 did not improve the aggregate answerability
 metrics over top-k 4. Similarity is a ranking signal, not a calibrated
 probability of correctness.
 
+Before retrieval, a small deterministic normalizer may add one conservative
+query variant for recognized intents such as a missed shift check-in or a
+casually worded refund request. The original question is always searched first,
+and normalized results are merged only when their top source document agrees
+with the original search's top source. Ambiguous requests such as "I want to
+speak to someone" are left unchanged. The original user wording is still passed
+to answer generation, and the 0.50 evidence threshold remains unchanged.
+
+Indexing also attaches conservative semantic aliases to chunks when the related
+concept is explicitly present—for example, `clock in` and `punch in` for
+`check-in`, `money back` for `refund`, and `QA review` for `quality review`.
+Aliases are stored as Chroma metadata. An exact recognized alias adds a
+deterministic canonical query variant while the indexed vectors continue to use
+only original source text. Chroma's stored document and all displayed or cited
+excerpts therefore remain unmodified. Unknown or ambiguous wording does not
+activate an alias.
+
 ## Grounded Answer Generation
 
 Answer generation is optional and uses a local Ollama server. The default model
@@ -265,10 +282,15 @@ at a time. Raw ratings should not automatically retrain or modify the system.
 
 ## Evaluation Framework
 
-`data/evaluation_questions.csv` contains **25 portfolio evaluation cases**: 19
-answerable questions and six questions whose requested information is absent.
-Each row contains a question, expected source, human-written expected-answer
-summary, and Yes/No answerability label.
+`data/evaluation_questions.csv` contains **25 canonical portfolio evaluation
+cases**: 19 answerable questions and six questions whose requested information
+is absent. Each row contains a question, expected source, human-written
+expected-answer summary, and Yes/No answerability label.
+
+`data/evaluation_paraphrases.csv` adds three meaning-preserving variants for
+each of 10 answerable canonical questions, for **30 paraphrase cases** spanning
+all five synthetic SOPs. The paraphrases change wording, pronouns, and sentence
+structure without changing the expected policy meaning.
 
 The local evaluator runs retrieval for every question and reports:
 
@@ -280,6 +302,18 @@ The local evaluator runs retrieval for every question and reports:
   retrieval gate. This measures risk, not a verified hallucination.
 - **Source-match rate:** expected source is ranked first for an answerable
   question.
+- **Canonical query accuracy:** for the 10 canonical questions paired with
+  paraphrases, the expected source appears in top-k and the evidence gate passes.
+- **Paraphrase Retrieval Success Rate:** the expected source appears in top-k
+  and the same pre-generation evidence gate passes for a paraphrased variant.
+- **Unsupported-question refusal accuracy:** an expected-unanswerable canonical
+  question stays below the evidence gate.
+
+For these deterministic evaluation metrics, “supported answer” means retrieval
+found the expected source and passed the same `0.50` evidence threshold used by
+the application before generation. This keeps the run independent of Ollama
+availability. It does not grade generated answer wording or claim-level
+correctness.
 
 After reducing overlap to 120, the recorded evaluation result is:
 
@@ -289,6 +323,9 @@ After reducing overlap to 120, the recorded evaluation result is:
 | Answerability classification accuracy | 22/25 (88.0%) |
 | Unsupported-answer rate | 3/6 (50.0%) |
 | Source-match rate | 18/19 (94.7%) |
+| Canonical query accuracy | 10/10 (100.0%) |
+| Paraphrase Retrieval Success Rate | 22/30 (73.3%) |
+| Unsupported-question refusal accuracy | 3/6 (50.0%) |
 
 Run it with:
 
@@ -298,7 +335,8 @@ python app.py evaluate --top-k 4
 
 Detailed runs are appended locally to `data/evaluation/results.jsonl`. This is a
 small, hand-authored **portfolio evaluation framework**, not a statistically
-representative production benchmark. It does not grade generated answer prose.
+representative production benchmark. The paraphrases are manually authored and
+are not a substitute for expert-reviewed production test data.
 
 ## Failure Analysis
 

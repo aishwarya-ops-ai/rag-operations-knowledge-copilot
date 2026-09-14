@@ -1,6 +1,23 @@
 HOW TO RUN OPERATIONS KNOWLEDGE COPILOT
 ========================================
 
+EASIEST METHOD: NO TYPING IN TERMINAL
+-------------------------------------
+
+Open this project folder in Finder and double-click START_APP.command.
+
+This launcher starts the required local services and opens the app in your browser.
+
+When you finish, double-click STOP_APP.command.
+
+This launcher stops the Streamlit process that START_APP.command created.
+
+If macOS asks whether you want to open a downloaded file, choose Open.
+
+
+MANUAL METHOD
+-------------
+
 You will use two Terminal windows: one for Ollama and one for Streamlit.
 
 

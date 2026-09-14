@@ -18,6 +18,7 @@ from src.config import (
     MIN_GROUNDING_SIMILARITY,
     OLLAMA_BASE_URL,
     OLLAMA_MODEL,
+    PARAPHRASE_EVALUATION_FILE,
 )
 from src.evaluation.evaluator import append_result, evaluate_portfolio_rag
 from src.feedback.store import FeedbackStore
@@ -193,6 +194,7 @@ def render_evaluation(retriever: Retriever, top_k: int) -> None:
                 questions_path=EVALUATION_FILE,
                 top_k=top_k,
                 minimum_similarity=MIN_GROUNDING_SIMILARITY,
+                paraphrases_path=PARAPHRASE_EVALUATION_FILE,
             )
             append_result(EVALUATION_RESULTS_FILE, result)
             st.session_state.evaluation_result = result
@@ -201,20 +203,38 @@ def render_evaluation(retriever: Retriever, top_k: int) -> None:
     if not result:
         return
 
-    col1, col2, col3, col4 = st.columns(4)
-    col1.metric("Retrieval hit rate", f"{result['retrieval_hit_rate']:.1%}")
-    col2.metric("Source match rate", f"{result['source_match_rate']:.1%}")
-    col3.metric(
+    existing_col1, existing_col2, existing_col3, existing_col4 = st.columns(4)
+    existing_col1.metric(
+        "Retrieval hit rate", f"{result['retrieval_hit_rate']:.1%}"
+    )
+    existing_col2.metric("Source match rate", f"{result['source_match_rate']:.1%}")
+    existing_col3.metric(
         "Unsupported-answer rate", f"{result['unsupported_answer_rate']:.1%}"
     )
-    col4.metric(
+    existing_col4.metric(
         "Answerability accuracy",
         f"{result['answerability_classification_accuracy']:.1%}",
     )
+
+    robustness_col1, robustness_col2, robustness_col3 = st.columns(3)
+    robustness_col1.metric(
+        "Canonical query accuracy", f"{result['canonical_query_accuracy']:.1%}"
+    )
+    robustness_col2.metric(
+        "Paraphrase Retrieval Success Rate",
+        f"{result['paraphrase_retrieval_success_rate']:.1%}",
+    )
+    robustness_col3.metric(
+        "Unsupported-question refusal accuracy",
+        f"{result['unsupported_question_refusal_accuracy']:.1%}",
+    )
     st.caption(
-        f"Evaluated {result['question_count']} questions with top-k={result['top_k']} "
-        f"and similarity threshold {result['minimum_similarity']:.2f}. Results were "
-        "saved to the ignored local evaluation history."
+        f"Evaluated {result['question_count']} canonical questions and "
+        f"{result['paraphrase_count']} paraphrases with top-k={result['top_k']} "
+        f"and similarity threshold {result['minimum_similarity']:.2f}. A supported "
+        "answer here means the expected source was retrieved and the evidence gate "
+        "passed; generated prose is not graded. Results were saved to the ignored "
+        "local evaluation history."
     )
 
     table_rows = [
@@ -230,6 +250,20 @@ def render_evaluation(retriever: Retriever, top_k: int) -> None:
     ]
     with st.expander("Show question-level results"):
         st.dataframe(table_rows, width="stretch", hide_index=True)
+
+    paraphrase_rows = [
+        {
+            "Canonical ID": case["canonical_id"],
+            "Paraphrase": case["question"],
+            "Pass": case["paraphrase_pass"],
+            "Expected source": case["expected_source"],
+            "Retrieved sources": ", ".join(case["retrieved_sources"]),
+            "Top similarity": case["top_similarity"],
+        }
+        for case in result["paraphrase_cases"]
+    ]
+    with st.expander("Show paraphrase-level results"):
+        st.dataframe(paraphrase_rows, width="stretch", hide_index=True)
 
 
 vector_store, retriever, answer_service, feedback_store = load_services()

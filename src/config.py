@@ -9,6 +9,7 @@ DOCUMENTS_DIR = PROJECT_ROOT / "data" / "documents"
 CHROMA_DIR = PROJECT_ROOT / "data" / "chroma"
 MODEL_CACHE_DIR = PROJECT_ROOT / "data" / "models"
 EVALUATION_FILE = PROJECT_ROOT / "data" / "evaluation_questions.csv"
+PARAPHRASE_EVALUATION_FILE = PROJECT_ROOT / "data" / "evaluation_paraphrases.csv"
 EVALUATION_RESULTS_FILE = PROJECT_ROOT / "data" / "evaluation" / "results.jsonl"
 FEEDBACK_FILE = Path(
     os.getenv(

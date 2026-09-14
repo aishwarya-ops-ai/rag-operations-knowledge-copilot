@@ -19,6 +19,7 @@ class Chunk:
     source: str
     chunk_index: int
     character_count: int
+    retrieval_aliases: Tuple[str, ...] = ()
 
 
 @dataclass(frozen=True)

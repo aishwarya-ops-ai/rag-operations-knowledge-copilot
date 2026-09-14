@@ -10,8 +10,10 @@ suggested fix will improve the system.
 - Cases: 25 total — 19 answerable and 6 unanswerable
 - Retrieval configuration: cosine similarity, top-k 4
 - Answerability rule: best similarity must be at least `0.50`
-- Evaluation result: 100.0% retrieval hit rate, 80.0% answerability accuracy,
-  66.7% unsupported-answer risk, and 94.7% top-source match rate
+- Canonical evaluation result: 100.0% retrieval hit rate, 88.0% answerability
+  accuracy, 50.0% unsupported-answer risk, and 94.7% top-source match rate
+- Paired robustness result: 100.0% canonical query accuracy, 73.3% paraphrase
+  retrieval success, and 50.0% unsupported-question refusal accuracy
 - Chunk indexes below are zero-based, matching the CLI and stored metadata.
 
 The log includes every failed case plus a deliberately defined set of weak
@@ -19,8 +21,33 @@ passes. A weak pass is a case where the expected source ranked below first, or a
 correct answerability decision was within `0.05` of the `0.50` threshold. Under
 that definition, this run has five failures and two weak passes.
 
-No retrieval, chunking, embedding, top-k, or threshold change was made as part
-of this analysis.
+The paraphrase extension changed only evaluation data and reporting. No SOP,
+chunking, embedding, top-k, or threshold change was made to improve these scores.
+
+## Paraphrase robustness failures
+
+The 30-case paraphrase set contains eight failures. Seven retrieved the expected
+source within top-k but remained below the `0.50` evidence threshold: six at
+rank 1 and one at rank 2. One trainee refund question crossed the threshold
+using refund-policy evidence but did not retrieve the expected training source
+within top-k.
+
+| Case | Expected source | Expected-source rank | Top score | Failure summary |
+| --- | --- | ---: | ---: | --- |
+| `q-07-p3` | Customer Escalation Policy | 1 | 0.4239 | Correct source, weak similarity for “route a case” wording. |
+| `q-10-p2` | Customer Escalation Policy | 1 | 0.4748 | Correct source, ownership phrasing fell below the gate. |
+| `q-10-p3` | Customer Escalation Policy | 1 | 0.4632 | Correct source, responsibility wording fell below the gate. |
+| `q-12-p1` | Quality Review Guidelines | 1 | 0.4878 | “QA reviews” and “selection mix” ranked correctly but weakly. |
+| `q-12-p2` | Quality Review Guidelines | 1 | 0.4420 | “Quality audits” wording weakened semantic similarity. |
+| `q-14-p2` | Quality Review Guidelines | 1 | 0.4456 | “QA appeal” retrieved correctly but did not pass the gate. |
+| `q-22-p2` | New Employee Training SOP | 2 | 0.4639 | Training source appeared, but the entire result stayed below the gate. |
+| `q-22-p3` | New Employee Training SOP | Not in top 4 | 0.5761 | Refund authority outranked the decisive trainee restriction. |
+
+Likely causes include short or compressed paraphrases, vocabulary shifts such
+as “audit” versus “review,” and cross-document questions where refund language
+outweighs trainee status. Possible future fixes include a local reranker,
+hybrid lexical-semantic retrieval, or narrowly expanded aliases. These are
+recorded as candidates only; no automatic retrieval tuning was applied.
 
 ## Case q-11 — Failed: unsupported phone-number question passed the gate
 
